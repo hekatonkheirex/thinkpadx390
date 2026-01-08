@@ -1,9 +1,6 @@
 # Global path
 PATH="$HOME/.local/bin:/usr/local/bin:$PATH"
 
-# Spicetify path
-PATH=$PATH:/home/mura/.spicetify
-
 # Set the directoy we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -189,6 +186,7 @@ eval "$(zoxide init --cmd cd zsh)"
 export TERM="kitty"
 export SUDO_PROMPT="Say friend and enter: "
 export PAGER="most"
+export EDITOR="nvim"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5c2e7,hl:#f38ba8 \
 --color=fg:#a6e3a1,header:#f38ba8,info:#89b4fa,pointer:#f5c2e7 \

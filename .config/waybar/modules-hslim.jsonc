@@ -193,6 +193,32 @@
     "tooltip": false,
   },
 
+  "temperature": {
+    "format": "&#xeb38; {temperatureC}°C",
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C",
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": "&#xef8e; {}%",
+    "max-length": 10
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": "&#xf075; {}%",
+    "max-length": 10
+  },
+
+  "disk": {
+  	"interval": 30,
+	  "format": "&#xf384; {free}",
+	  "unit": "GB"
+  },
+
   "custom/weather": {
     "exec": "python ~/.config/waybar/scripts/weather.py",
     "restart-interval": 300,

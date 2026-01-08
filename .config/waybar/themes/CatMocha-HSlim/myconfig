@@ -36,6 +36,6 @@
 
   // Choose the order of the modules
   "modules-left": ["image", "hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["custom/spotify"],
-  "modules-right": ["custom/kernel", "idle_inhibitor", "custom/wall", "custom/themeswitcher","custom/updates2", "wireplumber", "backlight", "battery", "custom/weather","clock", "hyprland/language", "tray", "custom/swaync"],
+  "modules-center": ["custom/wall", "clock", "custom/themeswitcher"],
+  "modules-right": ["idle_inhibitor","custom/updates2", "cpu", "memory", "temperature", "disk", "wireplumber", "backlight", "battery", "hyprland/language", "tray", "custom/swaync"],
 }

@@ -211,6 +211,36 @@ window#waybar.empty #window {
   margin: 0 5px 0 7px;
 }
 
+/* Temperature */
+#temperature {
+  color: #a6e3a1;
+  margin: 0 5px 0 7px;
+}
+#temperature.warning {
+  color: #fab387;
+}
+#temperature.critiacl {
+  color: #f38ba8;
+}
+
+/* CPU */
+#cpu {
+  color: #89b4fa;
+  margin: 0 5px 0 7px;
+}
+
+/* Memory */
+#memory {
+  color: #74c7ec;
+  margin: 0 5px 0 7px;
+}
+
+/* Disk */
+#disk {
+  color: #89dceb;
+  margin: 0 5px 0 7px;
+}
+
 /** ********** Custom ********** **/
 #custom-weather {
   margin: 0 5px 0 5px;
@@ -289,7 +319,6 @@ window#waybar.empty #window {
   color: #6c7086;
   margin: 0 5px 0 5px;
 }
-
 
 /* Kernel */
 #custom-kernel {
