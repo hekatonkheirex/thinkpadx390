@@ -219,14 +219,20 @@
 	  "unit": "GB"
   },
 
-  "custom/weather": {
-    "exec": "python ~/.config/waybar/scripts/weather.py",
-    "restart-interval": 300,
-    "return-type": "json",
-    "on-click": "xdg-open https://weather.com/es-PY/tiempo/hoy/l/9cee4da1e5921087a9f5428a20d8a19635cbec01a0ef30a7eda1301a91975371"
-    // "format-alt": "{alt}",
-  },
-  
+	"group/hardware": {
+    "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false,
+    },
+		"orientation": "horizontal",
+		"modules": [
+			"cpu",
+			"memory",
+			"temperature",
+      "disk"
+		]
+	},
+
   "custom/wall":{
     "format":"&#xeb00;",
     // "interval": 1,
@@ -241,7 +247,7 @@
   // },
 
   "custom/swaync": {
-    "tooltip":true,     
+    "tooltip": true,
     "format": "{icon}",
     "format-icons": {
       "notification": "&#xea35;<span foreground='red'><sup>!</sup></span>",

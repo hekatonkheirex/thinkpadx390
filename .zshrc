@@ -182,6 +182,14 @@ alias mirrors="sudo reflector --latest 10 --age 6 --country US,Paraguay --sort r
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 # Custom env
 export TERM="kitty"
 export SUDO_PROMPT="Say friend and enter: "

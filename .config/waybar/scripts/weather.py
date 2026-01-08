@@ -42,7 +42,8 @@ status = f"{status[:16]}.." if len(status) > 17 else status
 # print(status)
 
 # status code
-status_code = html_data("#regionHeader").attr("class").split(" ")[2].split("-")[2]
+# status_code = html_data("#regionHeader").attr("class").split(" ")[2].split("-")[2]
+status_code = "default"
 # print(status_code)
 
 # status icon
@@ -75,7 +76,8 @@ temp_min_max = f"&#xebed;  {temp_min}\t\t&#xebee;  {temp_max}"
 # print(temp_min_max)
 
 # wind speed
-wind_speed = html_data("span[data-testid='Wind']").text().split("\n")[1]
+# wind_speed = html_data("span[data-testid='Wind']").text().split("\n")[1]
+wind_speed = 0
 wind_text = f"&#xec34;  {wind_speed}"
 # print(wind_text)
 
