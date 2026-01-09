@@ -1,21 +1,12 @@
-/* ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗      ██████╗███████╗███████╗ */
-/* ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔════╝██╔════╝ */
-/* ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝    ██║     ███████╗███████╗ */
-/* ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗    ██║     ╚════██║╚════██║ */
-/* ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║    ╚██████╗███████║███████║ */
-/*  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝╚══════╝╚══════╝ */
-
 /* General configuration */
 * {
   border: none;
-  font-family: "Nunito", "tabler-icons";
+  font-family: "Inter Display", "tabler-icons";
   font-size: 13px;
-  /* font-weight: bold; */
 }
 
 window#waybar {
-  background: rgba(30, 30, 46, 0.8);
-  box-shadow: 2 2 2 4px #1e1e2e;
+  background: transparent;
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -27,25 +18,28 @@ window#waybar.hidden {
 /* Tooltips */
 tooltip {
   background: rgba(30, 30, 46, 0.9);
+  border: 1px solid rgba(30, 30, 46, 0.9);
+  border-radius: 16px;
   padding: 20px;
 }
 tooltip label {
-  color: #cdd6f4;
+  color: #b4befe;
 }
 
 /* Workspaces */
 #workspaces {
+  background: transparent;
   border-radius: 16px;
-  margin: 5px 10px 3px 0;
-  padding: 1px 1px;
+  margin: 1px 0px 0px 4px;
 }
 
 #workspaces button {
-  background: #45475a;
+  background: #313244;
   border-radius: 10px;
-  margin: 0px 3px;
+  margin: 1px 1px;
   min-height: 1px;
-  padding: 0 10px;
+  opacity: 0.6;
+  padding: 0 4px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -61,6 +55,7 @@ tooltip label {
   background-size: 400% 400%;
   border-radius: 10px;
   min-width: 40px;
+  opacity: 1.0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -79,21 +74,20 @@ window#waybar.empty #window {
 
 /** ********* Taskbar ********** **/
 #taskbar {
-  background: #1e1e2e;
-  /* border: 3px solid #262626; */
+  background: #45475a;
+  /* border: 3px solid #3c3836; */
   border-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
-  margin: 5px 6px 3px 0;
+  /* margin: 5px 6px 3px 0; */
   opacity: 0.8;
   /* padding: 2px 10px 0 10px; */
 }
 #taskbar button {
-  margin: 0;
+  /* margin: 0; */
   padding: 0 5px;
 }
 taskbar#waybar.empty #taskbar {
   background-color: transparent;
-  margin: 5px 10px 3px 0;
+  /* margin: 5px 10px 3px 0; */
   padding: 2px 10px 0 10px;
 }
 
@@ -110,42 +104,60 @@ taskbar#waybar.empty #taskbar {
 #window{
   color: #b4befe;
   font-weight: bold;
-  margin: 0 5px 0 5px;
+  margin: 1px 0px 0px 4px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 window#waybar.empty #window {
   background-color: transparent;
+  opacity: 0.0;
 }
 
 /** ********** Pulseaudio ********** **/
 #pulseaudio {
-  color: #89b4fa;
-  margin: 0 5px 0 5px;
+  background: linear-gradient(45deg, #f5c2e7, #cba6f7);
+  border-radius: 16px;
+  color: #1e1e2e;
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0 5px;
+  opacity: 0.8;
 }
 
-/** ********** Wireplumber ********** **/
+/* Wireplumber */
 #wireplumber {
-  color: #89b4fa;
-  margin: 0 5px 0 5px;
+  background: linear-gradient(45deg,#cba6f7, #f5c2e7);
+  border-radius: 16px;
+  color: #1e1e2e;
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0px 5px;
+  opacity: 0.8;
 }
 
 /** ********** Backlight ********** **/
 #backlight {
-  color: #94e2d5;
-  margin: 0 5px 0 5px;
+  background: linear-gradient(45deg, #cba6f7, #f5c2e7);
+  border-radius: 16px;
+  color: #1e1e2e;
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0 5px;
+  opacity: 0.8;
 }
 
 /** ********** Battery ********** **/
 #battery {
-  color: #a6e3a1;
-  margin: 0 5px 0 5px;
+  background: linear-gradient(45deg, #f5c2e7, #cba6f7);
+  border-radius: 16px;
+  color: #1e1e2e;
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0 5px;
+  opacity: 0.8;
 }
 
 #battery.charging {
-  color: #f38ba8;
+  background: linear-gradient(45deg, #eba0ac, #f38ba8);
 }
 
 #battery.plugged {
-  color: #fab387;
+  background: linear-gradient(45deg, #94e2d5, #a6e3a1);
 }
 
 @keyframes blink {
@@ -160,20 +172,28 @@ window#waybar.empty #window {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  color: #161616;
+  color: #1e1e2e;
   opacity: 1.0;
 }
 
 /** ********** Clock ********** **/
 #clock {
-  color: #f5c2e7;
-  margin: 0 5px 0 5px;
+  background: linear-gradient(45deg,#cba6f7, #f5c2e7);
+  border-radius: 16px;
+  color: #1e1e2e;
+  font-weight: bold;
+  margin: 1px 0px 0px 4px;
+  opacity: 0.8;
+  padding: 0px 5px 0 5px;
 }
 
 /** ********** Tray ********** **/
 #tray {
-  margin: 0 5px 0 5px;
-  padding: 0 5px 0 5px;
+  background: #45475a;
+  border-radius: 16px;
+  margin: 1px 0px 0px 4px;
+  opacity: 0.8;
+  padding: 0px 5px 0 5px;
 }
 #tray > .passive {
   -gtk-icon-effect: dim;
@@ -184,25 +204,42 @@ window#waybar.empty #window {
   background-color: #f38ba8;
 }
 
-/** ********** Language ********** **/
 #language {
   color: #cdd6f4;
-  margin: 0 5px 0 7px;
+  /* font-weight: bold; */
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0 5px;
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 
-/** ********** Idle Inhibitor ********** **/
 #idle_inhibitor {
-  color: #6c7086;
-  margin: 0 5px 0 7px;
+  background: #313244;
+  border-radius: 16px;
+  color: #585b70;
+  margin: 1px 0px 0px 0px;
+  opacity: 0.8;
+  padding: 0px 5px 0 5px;
 }
 #idle_inhibitor.activated {
-  color: #cba6f7;
+  animation: gradient_f 20s ease-in-out infinite;
+  /* background: rgb(203,166,247); */
+  /* background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); */
+  background-size: 400% 400%;
+  background: linear-gradient(45deg, #cba6f7, #f5c2e7);
+  border-radius: 16px;
+  color: #1e1e2e;
   font-weight: bold;
+  opacity: 0.8;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
+
 
 /** ********** Image ********** **/
 #image {
-  margin: 0 7px 0 5px;
+  border-radius: 16px;
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0px 5px;
 }
 
 /** ********** power-profiles-daemon ********** **/
@@ -211,12 +248,60 @@ window#waybar.empty #window {
   margin: 0 5px 0 7px;
 }
 
+/* Temperature */
+#temperature {
+  background: linear-gradient(45deg,#cba6f7, #f5c2e7);
+  border-radius: 16px;
+  color: #1e1e2e;
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0px 5px;
+  opacity: 0.8;
+}
+#temperature.warning {
+  color: #fab387;
+}
+#temperature.critiacl {
+  color: #f38ba8;
+}
+
+/* CPU */
+#cpu {
+  background: linear-gradient(45deg,#cba6f7, #f5c2e7);
+  border-radius: 16px;
+  color: #1e1e2e;
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0px 5px;
+  opacity: 0.8;
+}
+
+/* Memory */
+#memory {
+  background: linear-gradient(45deg,#cba6f7, #f5c2e7);
+  border-radius: 16px;
+  color: #1e1e2e;
+  margin: 1px 0px 0px 4px;
+  padding: 0px 5px 0px 5px;
+  opacity: 0.8;
+}
+
+/* Disk */
+#disk {
+  color: #89dceb;
+  margin: 0 5px 0 7px;
+}
+
 /** ********** Custom ********** **/
+
 #custom-weather {
-  margin: 0 5px 0 5px;
+  background: linear-gradient(45deg,#cba6f7, #f5c2e7);
+  border-radius: 16px;
+  font-weight: bold;
+  margin: 1px 0px 0px 4px;
+  opacity: 0.8;
+  padding: 0px 5px 0 5px;
 }
 #custom-weather#custom-weather.default {
-  color: #a6e3a1;
+  color: #1e1e2e;
 }
 #custom-weather.severe {
   color: #f38ba8;
@@ -225,29 +310,40 @@ window#waybar.empty #window {
   color: #f9e2af;
 }
 #custom-weather.clearNight {
-  color: #7f849c;
+  color: #cdd6f4;
 }
 #custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-  color: #a6adc8;
+  color: #9399b2;
 }
 #custom-weather.rainyDay, #custom-weather.rainyNight {
-  color: #f2cdcd;
+  color: #bac2de;
 }
 #custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
-  color: #74c7ec;
+  color: #89dceb;
 }
 
-/* Wall */
 #custom-wall {
-  color: #f5e0dc;
-  margin: 0 5px 0 5px;
+  color: #89b4fa;
+  margin: 1px 0px 0px 0px;
+  opacity: 0.8;
+  padding: 0px 5px 0 5px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 
 /* Swaync */
 #custom-swaync {
-  color: #bac2de;
+  animation: gradient_f 20s ease-in-out infinite;
+  /* background: rgb(177,98,247); */
+  /* background: radial-gradient(circle, rgba(203,166,247,1) 0%, rgba(193,168,247,1) 12%, rgba(249,226,175,1) 19%, rgba(189,169,247,1) 20%, rgba(182,171,247,1) 24%, rgba(198,255,194,1) 36%, rgba(177,172,247,1) 37%, rgba(170,173,248,1) 48%, rgba(255,255,255,1) 52%, rgba(166,174,248,1) 52%, rgba(160,175,248,1) 59%, rgba(148,226,213,1) 66%, rgba(155,176,248,1) 67%, rgba(152,177,248,1) 68%, rgba(205,214,244,1) 77%, rgba(148,178,249,1) 78%, rgba(144,179,250,1) 82%, rgba(180,190,254,1) 83%, rgba(141,179,250,1) 90%, rgba(137,180,250,1) 100%); */
+  background-size: 400% 400%;
+  background: linear-gradient(45deg, #f5c2e7, #cba6f7);
+  border-radius: 16px;
+  color: #1e1e2e;
   font-weight: bold;
-  margin: 0 7px 0 5px;
+  margin: 1px 4px 0px 4px;
+  opacity: 0.8;
+  padding: 0px 5px 0 5px;
+  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 @keyframes gradient_f {
@@ -261,38 +357,12 @@ window#waybar.empty #window {
 		background-position: 400% 200%;
 	}
 }
+
 /* Theme switcher */
 #custom-themeswitcher {
   color: #f5e0dc;
-  margin: 0 5px 0 5px;
-}
-
-/* Spotify */
-#custom-spotify {
-  color: #a6e3a1;
-  margin: 0 5px 0 5px;
-}
-
-/* Pacman */
-#custom-pacman {
-  color: #6c7086;
-  margin: 0 5px 0 5px;
-}
-
-/* Updates */
-#custom-updates {
-  color: #6c7086;
-  margin: 0 5px 0 5px;
-}
-
-#custom-updates2 {
-  color: #6c7086;
-  margin: 0 5px 0 5px;
-}
-
-
-/* Kernel */
-#custom-kernel {
-  color: #6c7086;
-  margin: 0 5px 0 5px;
+  margin: 1px 0px 0px 4px;
+  opacity: 0.8;
+  padding: 0px 5px 0 5px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }

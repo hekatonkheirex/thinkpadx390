@@ -1,24 +1,19 @@
 {
   "hyprland/workspaces": {
     "disable-scroll": false,
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    // "persistent_workspaces": {
-    //   "*": 6,
-    // },
+    "all-outputs": false,
+    "warp-on-scroll": false,
     "format": "{icon}",
     "format-icons": {
-      // "1": "",
-      // "2": "",
-      // "3": "",
-      // "4": "",
-      // "5": "",
-      // "6": "",
-      "urgent": "",
+      // "1": "&#xf38f;",
+      // "2": "&#xebef;",
+      // "3": "&#xeaa4;",
+      // "4": "&#xeaec;",
+      // "5": "&#xeae3;",
+      // "6": "&#xed03;",
+			"urgent": "",
 			"active": "",
 			"default": "",
-    "sort-by-number": true
     },
   },
 
@@ -34,6 +29,7 @@
       "~": "kitty",
       "n": "nvim",
     },
+    "rotate": 90,
     "separate-outputs": true
   },
 
@@ -44,7 +40,7 @@
     "on-click": "activate",
     "on-click-middle": "close",
     "ignore-list": [
-      "kitty"
+      "wezterm"
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"
@@ -55,47 +51,75 @@
     }
   },
 
-  "backlight": {
+  "backlight#1": {
     "interval": 2,
-    //"device": "amdgpu_bl0",
-    "format": "{icon} {percent}%",
+    "format": "{icon}",
     "format-icons": ["&#xeb7f;"],
     "on-scroll-up": "light -A 5%",
     "on-scroll-down": "light -U 5%",
     "smooth-scrolling-threshold": 1,
     "tooltip": false,
   },
+  "backlight#2": {
+    "interval": 2,
+    "format": "{percent}%",
+    "on-scroll-up": "light -A 5%",
+    "on-scroll-down": "light -U 5%",
+    "smooth-scrolling-threshold": 1,
+    "tooltip": false,
+  },
 
-  "battery": {
+  "battery#1": {
 		"interval": 60,
-		//"bat": "BAT1",
-		//"adapter": "ACAD",
 		"full-at": 100,
 		"design-capacity": false,
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 20
+      "critical": 15
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": "&#xea33; {capacity}%",
-    "format-plugged": "&#xef3b; {capacity}%",
-    "format-full": "&#xf668; 100%",
+    "format": "{icon}",
+    "format-charging": "&#xea33;",
+    "format-plugged": "&#xef3b;",
+    "format-full": "&#xf668;",
     "format-icons": ["&#xea34;", "&#xea2f;", "&#xea30;", "&#xea31;", "&#xea32;"],
-    "format-alt": "{time}",
+    "format-time": "{H}h {M}min",
+    "tooltip": true,
+  },
+  "battery#2": {
+		"interval": 60,
+		"full-at": 100,
+		"design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}%",
+    "format-charging": "{capacity}%",
+    "format-plugged": "{capacity}%",
+    "format-full": "100%",
     "format-time": "{H}h {M}min",
     "tooltip": true,
   },
 
-  "clock": {
-    "format": "&#xea70; {:%H:%M}",
+  "clock#1": {
+    "format": "{:%H}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "format": {
         "today": "<span color = '#f38ba8'><b><u>{}</u></b></span>",
       },
     },
-    "format-alt": "&#xea53; {:%Y-%m-%d}",
+  },
+  "clock#2": {
+    "format": "{:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color = '#f38ba8'><b><u>{}</u></b></span>",
+      },
+    },
   },
 
   "idle_inhibitor": {
@@ -118,12 +142,12 @@
     "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
   },
 
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "&#xf1c3; Muted",
-    "format-bluetooth": "&#xea37; {volume}%",
-    "format-source": "&#xeaf0; {volume}%",
-    "format-source-muted": "&#xed16; Muted",
+  "pulseaudio#1": {
+    "format": "{icon}",
+    "format-muted": "&#xf1c3;",
+    "format-bluetooth": "&#xea37;",
+    "format-source": "&#xeaf0;",
+    "format-source-muted": "&#xed16;",
     "format-icons": {
       "headphone": "&#xeabd;",
       "hands-free": "&#xf5a9;",
@@ -137,22 +161,12 @@
     "on-click-right": "pavucontrol",
     "smooth-scrolling-threshold": 1,
   },
-
-
-  "wireplumber": {
-    "format": "{icon} {volume}%",
-    "format-muted": "&#xf1c3; Muted",
-    "format-bluetooth": "&#xea37; {volume}%",
-    "format-source": "&#xeaf0; {volume}%",
-    "format-source-muted": "&#xed16; Muted",
-    "format-icons": {
-      "headphone": "&#xeabd;",
-      "hands-free": "&#xf5a9;",
-      "headset": "&#xeb90;",
-      "phone": "&#xeb09;",
-      "portable": "&#xea8a;",
-      "default": ["&#xeb50;", "&#xeb4f;", "&#xeb51;"]
-    },
+  "pulseaudio#2": {
+    "format": "{volume}%",
+    "format-muted": "Mute",
+    "format-bluetooth": "{volume}%",
+    "format-source": "{volume}%",
+    "format-source-muted": "Mute",
     "scroll-step": 5.0,
     "on-click": "amixer set Master toggle",
     "on-click-right": "pavucontrol",
@@ -171,61 +185,27 @@
     "tooltip": "false",
   },
   
-
-  "image": {
-    "path": "/home/mura/.config/waybar/hyprland.png",
-    "size": 24,
-    "interval": 10,
-    "on-click": "killall rofi || rofi -show drun",
-    "tooltip": false,
-  },
-
-  "temperature": {
-    "format": "&#xeb38; {temperatureC}°C",
-    "thermal-zone": 2,
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    "critical-threshold": 80,
-    "format-critical": "{temperatureC}°C",
-  },
-
-  "cpu": {
-    "interval": 10,
-    "format": "&#xef8e; {}%",
-    "max-length": 10
-  },
-
-  "memory": {
-    "interval": 30,
-    "format": "&#xf075; {}%",
-    "max-length": 10
-  },
-
-  "disk": {
-  	"interval": 30,
-	  "format": "&#xf384; {free}",
-	  "unit": "GB"
-  },
-
-	"group/hardware": {
-    "drawer": {
-        "transition-duration": 500,
-        "transition-left-to-right": false,
-    },
-		"orientation": "horizontal",
-		"modules": [
-			"cpu",
-			"memory",
-			"temperature",
-      "disk"
-		]
-	},
-
-  "custom/weather": {
+  "custom/weather#1": {
     "exec": "python ~/.config/waybar/scripts/weather.py",
     "restart-interval": 300,
     "return-type": "json",
     "on-click": "xdg-open https://weather.com/es-PY/tiempo/hoy/l/9cee4da1e5921087a9f5428a20d8a19635cbec01a0ef30a7eda1301a91975371"
     // "format-alt": "{alt}",
+  },
+  "custom/weather#2": {
+    "exec": "python ~/.config/waybar/scripts/weather.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/es-PY/tiempo/hoy/l/9cee4da1e5921087a9f5428a20d8a19635cbec01a0ef30a7eda1301a91975371"
+    // "format-alt": "{alt}",
+  },
+
+  "image": {
+    "path": "/home/mura/.config/waybar/hyprland.png",
+    "size": 28,
+    "interval": 1,
+    "on-click": "killall rofi || rofi -show drun",
+    "tooltip": false,
   },
   
   "custom/wall":{
