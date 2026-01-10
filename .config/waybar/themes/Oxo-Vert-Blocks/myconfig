@@ -3,7 +3,7 @@
   /* "mode": "dock", 				// Display mode (dock|hide|invisible|overlay) */
   "exclusive": true, 				// Request an exclusive zone from the compositor
   "passthrough": false, 			// Pass any pointer events to the window under the bar
-  "position": "top", 			// Waybar position (top|bottom|left|right)
+  "position": "left", 			// Waybar position (top|bottom|left|right)
   "height": "", 					// Waybar height (to be removed for auto height)
   "width": "", 					// Waybar width (empty for auto width)
   "spacing": 0, 					// Gaps between modules
@@ -18,10 +18,10 @@
   "bar_id": "bar-0",
 
   // Load modules
-  "include": ["~/.config/waybar/modules-pills.jsonc"],
+  "include": ["~/.config/waybar/modules-blocks.jsonc"],
 
   // Choose the order of the modules
-  "modules-left": ["image", "hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["custom/wall", "clock", "custom/weather", "custom/themeswitcher"],
-  "modules-right": ["idle_inhibitor", "cpu", "memory", "temperature", "wireplumber", "backlight", "battery", "tray", "custom/swaync"],
+  "modules-left": ["image","hyprland/workspaces"],
+  "modules-center": ["custom/wall", "custom/themeswitcher", "idle_inhibitor"],
+  "modules-right": ["hyprland/language", "pulseaudio#1", "pulseaudio#2", "backlight#1", "backlight#2", "battery#1", "battery#2", "clock#1", "clock#2", "tray", "custom/swaync"],
 }
