@@ -1,4 +1,4 @@
-@import '../catpuccin-mocha.css';
+@import '../catppuccin-mocha.css';
 
 /* General configuration */
 * {
@@ -137,7 +137,7 @@ taskbar#waybar.empty #taskbar {
   padding: 2px;
 }
 #backlight.2 {
-  background: linear-gradient(180deg, @muave, @pink);
+  background: linear-gradient(180deg, @mauve, @pink);
   border-radius: 0 0 10px 10px;
   color: @base;
   font-size: 10px;

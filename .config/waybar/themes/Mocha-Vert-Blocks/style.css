@@ -1,4 +1,4 @@
-@import '../oxocarbon.css';
+@import '../catppuccin-mocha.css';
 
 /* General configuration */
 * {
@@ -29,45 +29,45 @@ tooltip {
   border-radius: 16px;
 }
 tooltip label {
-  color: @fg;
+  color: @text;
 }
 
 .modules-left {
-  border: 2px solid @bg2;
-  box-shadow: 6px 6px 0 @bg;
+  border: 2px solid @surface1;
+  box-shadow: 6px 6px 0 @base;
   margin: 4px 4px 0px 2px;
 }
 
 .modules-center {
-  border: 2px solid @bg2;
-  box-shadow: 6px 6px 0 @bg;
+  border: 2px solid @surface1;
+  box-shadow: 6px 6px 0 @base;
   margin: 4px 4px 0px 2px;
 }
 
 .modules-right {
-  border: 2px solid @bg2;
-  box-shadow: 6px 6px 0 @bg;
+  border: 2px solid @surface1;
+  box-shadow: 6px 6px 0 @base;
   margin: 0px 4px 10px 2px;
 }
 
 /* Workspaces */
 #workspaces {
-  background: @bg;
+  background: @base;
 }
 
 #workspaces button {
-  color: @bg3;
+  color: @surface2;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
-  color: @purple;
+  color: @mauve;
   background-size: 300% 300%;
   min-height: 30px;
 }
 
 #workspaces button.active {
-  color: @purple;
+  color: @mauve;
   transition: all 0.3s ease-in-out;
 }
 
@@ -76,7 +76,7 @@ tooltip label {
 }
 
 #workspaces button.persistent {
-  background: @purple;
+  background: @mauve;
   transition: all 0.3s ease-in-out;
 }
 
@@ -86,7 +86,7 @@ window#waybar.empty #window {
 
 /** ********* Taskbar ********** **/
 #taskbar {
-  background: @bg3;
+  background: @surface2;
   border-radius: 12px;
   opacity: 0.8;
 }
@@ -99,21 +99,21 @@ taskbar#waybar.empty #taskbar {
 
 /** ************ Window ************* **/
 #window {
-  color: @aqua;
+  color: @teal;
   font-weight: bold;
 }
 
 /** ********** Wireplumber ********** **/
 #wireplumber.1 {
-  background: @bg;
-  color: @fg;
+  background: @base;
+  color: @text;
   font-size: 16px;
   opacity: 0.8;
   padding: 4px 0px 0px 0px;
 }
 #wireplumber.2 {
-  background: @bg;
-  color: @fg;
+  background: @base;
+  color: @text;
   font-size: 10px;
   opacity: 0.8;
   padding: 0px 0px 4px 0px;
@@ -121,15 +121,15 @@ taskbar#waybar.empty #taskbar {
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: @bg;
-  color: @fg;
+  background: @base;
+  color: @text;
   font-size: 16px;
   opacity: 0.8;
   padding: 4px 0px 0px 0px;
 }
 #backlight.2 {
-  background: @bg;
-  color: @fg;
+  background: @base;
+  color: @text;
   font-size: 10px;
   opacity: 0.8;
   padding: 0px 0px 4px 0px;
@@ -137,16 +137,16 @@ taskbar#waybar.empty #taskbar {
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: @bg;
+  background: @base;
   font-size: 16px;
-  color: @fg;
+  color: @text;
   opacity: 0.8;
   padding: 4px 0px 0px 0px;
 }
 #battery.2 {
-  background: @bg;
+  background: @base;
   font-size: 10px;
-  color: @fg;
+  color: @text;
   opacity: 0.8;
   padding: 0px 0px 4px 0px;
 }
@@ -166,7 +166,7 @@ taskbar#waybar.empty #taskbar {
 
 @keyframes blink {
   to {
-    color: @orange;
+    color: @peach;
   }
 }
 
@@ -182,7 +182,7 @@ taskbar#waybar.empty #taskbar {
 
 /** ********** Clock ********** **/
 #clock.1 {
-  background: @bg;
+  background: @base;
   color: @blue;
   font-size: 24px;
   font-weight: bold;
@@ -190,7 +190,7 @@ taskbar#waybar.empty #taskbar {
   padding: 4px 0px 0px 0px;
 }
 #clock.2 {
-  background: @bg;
+  background: @base;
   color: @green;
   font-size: 24px;
   font-weight: bold;
@@ -201,7 +201,7 @@ taskbar#waybar.empty #taskbar {
 
 /** ********** ray ********** **/
 #tray {
-  background: @bg;
+  background: @base;
   opacity: 0.8;
   padding: 4px 0px 4px 0px;
 }
@@ -215,8 +215,8 @@ taskbar#waybar.empty #taskbar {
 }
 
 #language {
-  background: @bg;
-  color: @aqua;
+  background: @base;
+  color: @teal;
   font-weight: bold;
   font-size: 18px;
   opacity: 0.8;
@@ -224,8 +224,8 @@ taskbar#waybar.empty #taskbar {
 }
 
 #idle_inhibitor {
-  background: @bg;
-  color: @bg2;
+  background: @base;
+  color: @surface2;
   font-size: 16px;
   opacity: 0.8;
   padding: 4px 0px 8px 0px;
@@ -237,13 +237,13 @@ taskbar#waybar.empty #taskbar {
 
 /* ********** Image ************ */
 #image {
-  background: @bg;
+  background: @base;
   opacity: 1.0;
 }
 
 /** ********** Custom ********** **/
 #custom-wall {
-  background: @bg;
+  background: @base;
   color: @blue;
   font-size: 16px;
   opacity: 0.8;
@@ -252,8 +252,8 @@ taskbar#waybar.empty #taskbar {
 
 /* Swaync */
 #custom-swaync {
-  background: @bg;
-  color: @fg;
+  background: @base;
+  color: @text;
   font-size: 18px;
   font-weight: bold;
   opacity: 0.8;
@@ -274,8 +274,8 @@ taskbar#waybar.empty #taskbar {
 
 /* Theme switcher */
 #custom-themeswitcher {
-  background: @bg;
-  color: @aqua1;
+  background: @base;
+  color: @sky;
   font-size: 16px;
   opacity: 0.8;
   padding: 4px 0px 4px 0px;
