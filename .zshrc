@@ -169,9 +169,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --icons $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --icons $realpath'
 
 # Aliases
-alias ls="eza --icons"
-alias la="eza -la --icons"
-alias laa="eza -a --icons"
+alias ls="eza --icons --group-directories-first"
+alias la="eza -la --icons --group-directories-first"
+alias laa="eza -a --icons --group-directories-first"
 alias li=lsix
 alias update="paru"
 alias clean="paru -Rns $(pacman -Qdtq)"

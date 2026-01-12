@@ -1,2 +1,2 @@
 #!/bin/bash
-theme_name="Oxo-Vert-Blocks"
+theme_name="Dawn-Vert-Blocks"
