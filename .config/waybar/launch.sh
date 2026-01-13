@@ -7,7 +7,7 @@ killall waybar
 # ----------------------------------------------------- 
 # Default theme: /THEMEFOLDER;/VARIATION
 # ----------------------------------------------------- 
-themestyle="/CatMocha-HSlim"
+themestyle="/Catppuccin-Mocha-Vertical"
 
 # ----------------------------------------------------- 
 # Get current theme information from .cache/.themestyle.sh
@@ -23,7 +23,7 @@ IFS=';' read -ra arrThemes <<< "$themestyle"
 echo ${arrThemes[0]}
 
 if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
-    themestyle="/CatMocha-HSlim"
+    themestyle="/Catpuccin-Mocha-Vertical"
 fi
 
 # ----------------------------------------------------- 

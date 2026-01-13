@@ -35,6 +35,7 @@ fprintd
 fwupd
 fzf
 galculator
+gemini-cli
 git
 git-credential-manager-bin
 gnome-keyring
@@ -118,6 +119,7 @@ timeshift
 timeshift-autosnap
 tlp
 tlp-rdw
+tree
 ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
