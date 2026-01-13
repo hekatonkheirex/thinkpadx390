@@ -11,8 +11,8 @@ return {
     {
       "lewis6991/gitsigns.nvim",
       opts = {
-        _on_attach_pre = function(_, callback)
-          require("gitsigns-yadm").yadm_signs(callback)
+        _on_attach_pre = function(bufnfr, callback)
+          require("gitsigns-yadm").yadm_signs(callback, { bufnr = bufnfr })
         end,
         signs = {
           add = { text = "┃" },
