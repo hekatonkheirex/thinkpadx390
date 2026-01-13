@@ -242,31 +242,6 @@ window#waybar.empty #window {
 }
 
 /** ********** Custom ********** **/
-#custom-weather {
-  margin: 0 5px 0 5px;
-}
-#custom-weather#custom-weather.default {
-  color: #a6e3a1;
-}
-#custom-weather.severe {
-  color: #f38ba8;
-}
-#custom-weather.sunnyDay {
-  color: #f9e2af;
-}
-#custom-weather.clearNight {
-  color: #7f849c;
-}
-#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-  color: #a6adc8;
-}
-#custom-weather.rainyDay, #custom-weather.rainyNight {
-  color: #f2cdcd;
-}
-#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
-  color: #74c7ec;
-}
-
 /* Wall */
 #custom-wall {
   color: #f5e0dc;
@@ -297,25 +272,8 @@ window#waybar.empty #window {
   margin: 0 5px 0 5px;
 }
 
-/* Spotify */
-#custom-spotify {
-  color: #a6e3a1;
-  margin: 0 5px 0 5px;
-}
-
 /* Pacman */
 #custom-pacman {
-  color: #6c7086;
-  margin: 0 5px 0 5px;
-}
-
-/* Updates */
-#custom-updates {
-  color: #6c7086;
-  margin: 0 5px 0 5px;
-}
-
-#custom-updates2 {
   color: #6c7086;
   margin: 0 5px 0 5px;
 }

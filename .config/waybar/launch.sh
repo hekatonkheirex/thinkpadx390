@@ -1,37 +1,53 @@
-#!/usr/bin/env sh
+#!/bin/bash
+
 # ----------------------------------------------------- 
 # Quit all running waybar instances
 # ----------------------------------------------------- 
 killall waybar
 
 # ----------------------------------------------------- 
-# Default theme: /THEMEFOLDER;/VARIATION
+# Constants
 # ----------------------------------------------------- 
-themestyle="/Catppuccin-Mocha-Vertical"
+CACHE_FILE="$HOME/.cache/.themestyle.sh"
+THEME_DIR="$HOME/.config/waybar/themes"
+DEFAULT_THEME="Catppuccin-Mocha-Vertical"
 
 # ----------------------------------------------------- 
-# Get current theme information from .cache/.themestyle.sh
+# Read current theme
 # ----------------------------------------------------- 
-if [ -f ~/.cache/.themestyle.sh ]; then
-    themestyle=$(cat ~/.cache/.themestyle.sh)
+if [ -f "$CACHE_FILE" ]; then
+    THEME=$(cat "$CACHE_FILE")
 else
-    touch ~/.cache/.themestyle.sh
-    echo "$themestyle" > ~/.cache/.themestyle.sh
-fi
-
-IFS=';' read -ra arrThemes <<< "$themestyle"
-echo ${arrThemes[0]}
-
-if [ ! -f ~/.config/waybar/themes${arrThemes[1]}/style.css ]; then
-    themestyle="/Catpuccin-Mocha-Vertical"
+    THEME="$DEFAULT_THEME"
 fi
 
 # ----------------------------------------------------- 
-# Loading the configuration and style file based on the username
+# Migration/Sanitization: Handle old format (/Theme;Path)
 # ----------------------------------------------------- 
-if [[ $USER = "mura" ]]
-then
-    waybar -c ~/.config/waybar/themes${arrThemes[0]}/myconfig -s ~/.config/waybar/themes${arrThemes[1]}/style.css &
-else
-    waybar -c ~/.config/waybar/themes${arrThemes[0]}/config -s ~/.config/waybar/themes${arrThemes[1]}/style.css &
-fi 
+# This converts "/ThemeName;/Path" or "/ThemeName" to just "ThemeName"
+# It ensures compatibility if the old switcher was used.
+THEME=$(echo "$THEME" | cut -d';' -f1 | sed 's|^/||')
+
+# ----------------------------------------------------- 
+# Validate theme existence
+# ----------------------------------------------------- 
+if [ ! -d "$THEME_DIR/$THEME" ]; then
+    echo "Theme '$THEME' not found. Reverting to default."
+    THEME="$DEFAULT_THEME"
+fi
+
+# ----------------------------------------------------- 
+# Save valid, clean theme name
+# ----------------------------------------------------- 
+echo "$THEME" > "$CACHE_FILE"
+
+# ----------------------------------------------------- 
+# Select config file
+# ----------------------------------------------------- 
+CONFIG_FILE="config.jsonc"
+
+# ----------------------------------------------------- 
+# Launch Waybar
+# ----------------------------------------------------- 
+echo "Loading waybar with config: $THEME_DIR/$THEME/$CONFIG_FILE"
+waybar -c "$THEME_DIR/$THEME/$CONFIG_FILE" -s "$THEME_DIR/$THEME/style.css" &

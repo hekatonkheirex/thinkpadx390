@@ -3,7 +3,7 @@
     "format":"&#xeb00;",
     // "interval": 1,
     "on-click": "~/.config/waybar/scripts/wall",
-    "tooltip": false,
+    "tooltip": false
   },
 
   "custom/swaync": {
@@ -27,41 +27,12 @@
     "escape": true,
   },
 
-  "custom/spotify": {
-    "exec": "/usr/bin/python3 /home/mura/.config/waybar/scripts/spotsway.py --player spotify",
-    "format": "&#xed03; {}",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
-  },
-
   "custom/pacman": {
     "format": "&#xeaff; {}",
     "interval": 3600,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
     "on-click": "kitty --hold sh -c 'paru'; pkill -SIGRTMIN+8 waybar",
-    "signal": 8
-  },
-
-  "custom/updates": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "format-icons": {
-      "has-updates": "&#xeaff;",
-      "updated": "&#xf16c;"
-    },
-    "exec-if": "which waybar-module-pacman-updates",
-    "exec": "waybar-module-pacman-updates  --interval-seconds 5 --network-interval-seconds 300",
-    "on-click": "kitty --hold sh -c 'paru'; pkill -SIGRTMIN+8 waybar"
-  },
-
-  "custom/updates2": {
-    "format": "&#xeaff; {}",
-    "interval": 3600,
-    "exec": "~/.config/waybar/scripts/updates --get-updates",
-    "on-click": "kitty --hold sh -c '~/.config/waybar/scripts/updates --update-system'; pkill -SIGRTMIN+8 waybar",
     "signal": 8
   },
 
@@ -73,6 +44,6 @@
   "custom/themeswitcher": {
     "format": "&#xf51d;",
     "on-click": "~/.config/waybar/scripts/themeswitcher.sh",
-    "tooltip": false,
+    "tooltip": false
   }
 }

@@ -1,22 +1,11 @@
 {
   "hyprland/workspaces": {
-    // "active-only": false,
-    // "all-outputs": true,
     "disable-scroll": false,
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    // "persistent_workspaces": {
-    //   "*": 6,
-    // },
     "format": "{icon}",
     "format-icons": {
-       // "1": "&#xecfd;",
-       // "2": "&#xebef;",
-       // "3": "&#xeaa4;",
-       // "4": "&#xeaec;",
-       // "5": "&#xeae3;",
-       // "6": "&#xed03;",
 			"urgent": "",
 			"active": "",
 			"default": "",
@@ -59,7 +48,6 @@
 
   "backlight": {
     "interval": 10,
-    //"device": "amdgpu_bl0",
     "format": "{icon} {percent}%",
     "format-icons": ["&#xeb7f;"],
     "on-scroll-up": "light -A 5%",
@@ -70,8 +58,6 @@
 
   "battery": {
 		"interval": 60,
-		//"bat": "BAT1",
-		//"adapter": "ACAD",
 		"full-at": 100,
 		"design-capacity": false,
     "states": {
@@ -120,26 +106,6 @@
     "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
   },
 
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "&#xf1c3; Muted",
-    "format-bluetooth": "&#xea37; {volume}%",
-    "format-source": "&#xeaf0; {volume}%",
-    "format-source-muted": "&#xed16; Muted",
-    "format-icons": {
-      "headphone": "&#xeabd;",
-      "hands-free": "&#xf5a9;",
-      "headset": "&#xeb90;",
-      "phone": "&#xeb09;",
-      "portable": "&#xea8a;",
-      "default": ["&#xeb50;", "&#xeb4f;", "&#xeb51;"]
-    },
-    "scroll-step": 5.0,
-    "on-click": "amixer set Master toggle",
-    "on-click-right": "pavucontrol",
-    "smooth-scrolling-threshold": 1,
-  },
-
   "wireplumber": {
     "format": "{icon} {volume}%",
     "format-muted": "&#xf1c3; Muted",
@@ -171,18 +137,6 @@
     "format-en": "US",
     "format-es": "ES",
     "tooltip": "false",
-  },
-
-  "power-profiles-daemon": {
-  "format": "{icon}",
-  "tooltip-format": "Power profile: {profile}",
-  "tooltip": true,
-  "format-icons": {
-    "default": "&#xea38;",
-    "performance": "&#xea38;",
-    "balanced": "&#xebc2;",
-    "power-saver": "&#xed4f;"
-    }
   },
 
   "image": {

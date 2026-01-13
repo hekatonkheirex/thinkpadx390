@@ -206,38 +206,7 @@ window#waybar.empty #window {
   margin: 0 7px 0 5px;
 }
 
-/** ********** power-profiles-daemon ********** **/
-#power-profiles-daemon {
-  color: #42be65;
-  margin: 0 5px 0 7px;
-}
-
 /** ********** Custom ********** **/
-#custom-weather {
-  margin: 0 5px 0 5px;
-}
-#custom-weather#custom-weather.default {
-  color: #42be65;
-}
-#custom-weather.severe {
-  color: #ee5396;
-}
-#custom-weather.sunnyDay {
-  color: #ffab91;
-}
-#custom-weather.clearNight {
-  color: #525252;
-}
-#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
-  color: #90a4ae;
-}
-#custom-weather.rainyDay, #custom-weather.rainyNight {
-  color: #08bdba;
-}
-#custom-weather.showyIcyDay, #custom-weather.snowyIcyNight {
-  color: #82cfff;
-}
-
 /* Wall */
 #custom-wall {
   color: #33b1ff;
@@ -268,20 +237,8 @@ window#waybar.empty #window {
   margin: 0 5px 0 5px;
 }
 
-/* Spotify */
-#custom-spotify {
-  color: #42be65;
-  margin: 0 5px 0 5px;
-}
-
 /* Pacman */
 #custom-pacman {
-  color: #525252;
-  margin: 0 5px 0 5px;
-}
-
-/* Updates */
-#custom-updates {
   color: #525252;
   margin: 0 5px 0 5px;
 }
