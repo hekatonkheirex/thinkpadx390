@@ -83,7 +83,6 @@ pacutils
 papirus-folders-catppuccin-git
 papirus-icon-theme
 paru
-paru-debug
 pavucontrol
 phocus-gtk-theme-git
 pipewire
@@ -108,7 +107,6 @@ rsync
 rustup
 sddm-git
 sddm-silent-theme
-seahorse
 slurp
 sof-firmware
 swaync
@@ -133,7 +131,6 @@ ttf-ubuntu-font-family
 unrar
 unzip
 waybar
-waybar-weather
 waypaper
 wev
 wf-recorder
@@ -150,7 +147,6 @@ yazi
 yt-dlp
 zed
 zellij
-zen-browser-bin
 zoxide
 zramswap
 zsh
