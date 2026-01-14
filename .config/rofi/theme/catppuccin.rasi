@@ -71,19 +71,31 @@ textbox {
 listview {
     margin: 0.5em 0 0 0;
     lines: 6;
+    scrollbar: false;
 }
 
 element {
     padding: 0.5em;
     color: @fg;
+    cursor: pointer;
 }
 
 element selected.normal {
     background-color: @bg-alt;
+    text-color: @color1;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    highlight:        inherit;
+    vertical-align:   0.5;
 }
 
 element-icon {
     padding: 0 0.5em 0 1em;
+    size: 1em;
+    vertical-align: 0.5;
 }
 
 mode-switcher {

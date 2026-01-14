@@ -3,10 +3,14 @@ configuration {
   font: "Inter Bold 24px";
   icon-theme: "Papirus-Dark";
   show-icons: true;
+  drun-display-format: "{name}";
   display-drun: ">_";
   display-emoji: "😃";
   terminal: "kitty";
   sidebar-mode: true;
+  hover-select: true;
+  me-select-entry: "";
+  me-accept-entry: "MousePrimary";
 }
 
 @theme "~/.config/rofi/theme/catppuccin.rasi"
