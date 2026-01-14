@@ -88,7 +88,6 @@ window#waybar.empty #window {
 #taskbar {
   background: @surface2;
   border-radius: 12px;
-  opacity: 0.8;
 }
 #taskbar button {
   margin: 0;
@@ -108,14 +107,12 @@ taskbar#waybar.empty #taskbar {
   background: @base;
   color: @text;
   font-size: 16px;
-  opacity: 0.8;
   padding: 4px 0px 0px 0px;
 }
 #wireplumber.2 {
   background: @base;
   color: @text;
   font-size: 10px;
-  opacity: 0.8;
   padding: 0px 0px 4px 0px;
 }
 
@@ -124,14 +121,12 @@ taskbar#waybar.empty #taskbar {
   background: @base;
   color: @text;
   font-size: 16px;
-  opacity: 0.8;
   padding: 4px 0px 0px 0px;
 }
 #backlight.2 {
   background: @base;
   color: @text;
   font-size: 10px;
-  opacity: 0.8;
   padding: 0px 0px 4px 0px;
 }
 
@@ -140,14 +135,12 @@ taskbar#waybar.empty #taskbar {
   background: @base;
   font-size: 16px;
   color: @text;
-  opacity: 0.8;
   padding: 4px 0px 0px 0px;
 }
 #battery.2 {
   background: @base;
   font-size: 10px;
   color: @text;
-  opacity: 0.8;
   padding: 0px 0px 4px 0px;
 }
 #battery.1.charging {
@@ -177,7 +170,6 @@ taskbar#waybar.empty #taskbar {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   color: @red;
-  opacity: 1.0;
 }
 
 /** ********** Clock ********** **/
@@ -186,7 +178,6 @@ taskbar#waybar.empty #taskbar {
   color: @blue;
   font-size: 24px;
   font-weight: bold;
-  opacity: 0.8;
   padding: 4px 0px 0px 0px;
 }
 #clock.2 {
@@ -194,7 +185,6 @@ taskbar#waybar.empty #taskbar {
   color: @green;
   font-size: 24px;
   font-weight: bold;
-  opacity: 0.8;
   padding: 0px 0px 4px 0px;
 }
 
@@ -202,7 +192,6 @@ taskbar#waybar.empty #taskbar {
 /** ********** Tray ********** **/
 #tray {
   background: @base;
-  opacity: 0.8;
   padding: 4px 0px 4px 0px;
 }
 #tray > .passive {
@@ -219,7 +208,6 @@ taskbar#waybar.empty #taskbar {
   color: @teal;
   font-weight: bold;
   font-size: 18px;
-  opacity: 0.8;
   padding: 4px 0px 4px 0px;
 }
 
@@ -227,7 +215,6 @@ taskbar#waybar.empty #taskbar {
   background: @base;
   color: @surface2;
   font-size: 16px;
-  opacity: 0.8;
   padding: 4px 0px 8px 0px;
 }
 #idle_inhibitor.activated {
@@ -238,7 +225,6 @@ taskbar#waybar.empty #taskbar {
 /* ********** Image ************ */
 #image {
   background: @base;
-  opacity: 1.0;
 }
 
 /** ********** Custom ********** **/
@@ -246,7 +232,6 @@ taskbar#waybar.empty #taskbar {
   background: @base;
   color: @blue;
   font-size: 16px;
-  opacity: 0.8;
   padding: 8px 0px 4px 0px;
 }
 
@@ -256,7 +241,6 @@ taskbar#waybar.empty #taskbar {
   color: @text;
   font-size: 18px;
   font-weight: bold;
-  opacity: 0.8;
   padding: 4px 0px 4px 0px;
 }
 
@@ -277,6 +261,5 @@ taskbar#waybar.empty #taskbar {
   background: @base;
   color: @sky;
   font-size: 16px;
-  opacity: 0.8;
   padding: 4px 0px 4px 0px;
 }

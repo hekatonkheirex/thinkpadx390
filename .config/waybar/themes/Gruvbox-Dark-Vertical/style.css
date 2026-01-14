@@ -1,4 +1,4 @@
-@import '../rose-pine-dawn.css';
+@import '../gruvbox-dark.css';
 
 /* General configuration */
 * {
@@ -24,59 +24,59 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(250, 244, 237, 0.9);
-  border: 1px solid rgba(250, 244, 237, 0.9);
+  background: rgba(40, 40, 40, 0.9);
+  border: 1px solid rgba(40, 40, 40, 0.9);
   border-radius: 16px;
 }
 tooltip label {
-  color: @text;
+  color: @fg0;
 }
 
 .modules-left {
-  border: 2px solid @hl_high;
-  box-shadow: 6px 6px 0 @text;
+  border: 2px solid @bg2;
+  box-shadow: 6px 6px 0 @bg0;
   margin: 4px 4px 0px 2px;
 }
 
 .modules-center {
-  border: 2px solid @hl_high;
-  box-shadow: 6px 6px 0 @text;
+  border: 2px solid @bg2;
+  box-shadow: 6px 6px 0 @bg0;
   margin: 4px 4px 0px 2px;
 }
 
 .modules-right {
-  border: 2px solid @hl_high;
-  box-shadow: 6px 6px 0 @text;
+  border: 2px solid @bg2;
+  box-shadow: 6px 6px 0 @bg0;
   margin: 0px 4px 10px 2px;
 }
 
 /* Workspaces */
 #workspaces {
-  background: @base;
+  background: @bg0;
 }
 
 #workspaces button {
-  color: @text;
+  color: @bg3;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
-  color: @gold;
+  color: @green;
   background-size: 300% 300%;
   min-height: 30px;
 }
 
 #workspaces button.active {
-  color: @gold;
+  color: @green;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.urgent {
-  background: @love;
+  background: @red;
 }
 
 #workspaces button.persistent {
-  background: @gold;
+  background: @green;
   transition: all 0.3s ease-in-out;
 }
 
@@ -104,62 +104,62 @@ taskbar#waybar.empty #taskbar {
 
 /** ********** Wireplumber ********** **/
 #wireplumber.1 {
-  background: @base;
-  color: @text;
+  background: @bg0;
+  color: @fg0;
   font-size: 16px;
   padding: 4px 0px 0px 0px;
 }
 #wireplumber.2 {
-  background: @base;
-  color: @text;
+  background: @bg0;
+  color: @fg0;
   font-size: 10px;
   padding: 0px 0px 4px 0px;
 }
 
 /** ********** Backlight ********** **/
 #backlight.1 {
-  background: @base;
-  color: @text;
+  background: @bg0;
+  color: @fg0;
   font-size: 16px;
   padding: 4px 0px 0px 0px;
 }
 #backlight.2 {
-  background: @base;
-  color: @text;
+  background: @bg0;
+  color: @fg0;
   font-size: 10px;
   padding: 0px 0px 4px 0px;
 }
 
 /** ********** Battery ********** **/
 #battery.1 {
-  background: @base;
+  background: @bg0;
   font-size: 16px;
-  color: @text;
+  color: @fg0;
   padding: 4px 0px 0px 0px;
 }
 #battery.2 {
-  background: @base;
+  background: @bg0;
   font-size: 10px;
-  color: @text;
+  color: @fg0;
   padding: 0px 0px 4px 0px;
 }
 #battery.1.charging {
-  color: @love;
+  color: @red;
 }
 #battery.2.charging {
-  color: @love;
+  color: @red;
 }
 
 #battery.1.plugged {
-  color: @pine;
+  color: @green;
 }
 #battery.2.plugged {
-  color: @pine;
+  color: @green;
 }
 
 @keyframes blink {
   to {
-    color: @gold;
+    color: @yellow;
   }
 }
 
@@ -169,20 +169,20 @@ taskbar#waybar.empty #taskbar {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  color: @love;
+  color: @red;
 }
 
 /** ********** Clock ********** **/
 #clock.1 {
-  background: @base;
-  color: @iris;
+  background: @bg0;
+  color: @blue;
   font-size: 24px;
   font-weight: bold;
   padding: 4px 0px 0px 0px;
 }
 #clock.2 {
-  background: @base;
-  color: @rose;
+  background: @bg0;
+  color: @green;
   font-size: 24px;
   font-weight: bold;
   padding: 0px 0px 4px 0px;
@@ -191,7 +191,7 @@ taskbar#waybar.empty #taskbar {
 
 /** ********** Tray ********** **/
 #tray {
-  background: @base;
+  background: @bg0;
   padding: 4px 0px 4px 0px;
 }
 #tray > .passive {
@@ -200,45 +200,45 @@ taskbar#waybar.empty #taskbar {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: @love;
+  background-color: @red;
 }
 
 #language {
-  background: @base;
-  color: @foam;
+  background: @bg0;
+  color: @aqua;
   font-weight: bold;
   font-size: 18px;
   padding: 4px 0px 4px 0px;
 }
 
 #idle_inhibitor {
-  background: @base;
-  color: @hl_high;
+  background: @bg0;
+  color: @bg3;
   font-size: 16px;
   padding: 4px 0px 8px 0px;
 }
 #idle_inhibitor.activated {
   background-size: 300% 300%;
-  color: @love;
+  color: @red;
 }
 
 /* ********** Image ************ */
 #image {
-  background: @base;
+  background: @bg0;
 }
 
 /** ********** Custom ********** **/
 #custom-wall {
-  background: @base;
-  color: @pine;
+  background: @bg0;
+  color: @blue;
   font-size: 16px;
   padding: 8px 0px 4px 0px;
 }
 
 /* Swaync */
 #custom-swaync {
-  background: @base;
-  color: @text;
+  background: @bg0;
+  color: @fg0;
   font-size: 18px;
   font-weight: bold;
   padding: 4px 0px 4px 0px;
@@ -258,8 +258,8 @@ taskbar#waybar.empty #taskbar {
 
 /* Theme switcher */
 #custom-themeswitcher {
-  background: @base;
-  color: @iris;
+  background: @bg0;
+  color: @orange;
   font-size: 16px;
   padding: 4px 0px 4px 0px;
 }

@@ -1,4 +1,4 @@
-@import '../rose-pine-dawn.css';
+@import '../rose-pine.css';
 
 /* General configuration */
 * {
@@ -24,8 +24,8 @@ window#waybar.hidden {
 
 /* Tooltips */
 tooltip {
-  background: rgba(250, 244, 237, 0.9);
-  border: 1px solid rgba(250, 244, 237, 0.9);
+  background: rgba(25, 23, 36, 0.9);
+  border: 1px solid rgba(25, 23, 36, 0.9);
   border-radius: 16px;
 }
 tooltip label {
@@ -33,20 +33,20 @@ tooltip label {
 }
 
 .modules-left {
-  border: 2px solid @hl_high;
-  box-shadow: 6px 6px 0 @text;
+  border: 2px solid @hl_med;
+  box-shadow: 6px 6px 0 @tbase;
   margin: 4px 4px 0px 2px;
 }
 
 .modules-center {
-  border: 2px solid @hl_high;
-  box-shadow: 6px 6px 0 @text;
+  border: 2px solid @hl_med;
+  box-shadow: 6px 6px 0 @base;
   margin: 4px 4px 0px 2px;
 }
 
 .modules-right {
-  border: 2px solid @hl_high;
-  box-shadow: 6px 6px 0 @text;
+  border: 2px solid @hl_med;
+  box-shadow: 6px 6px 0 @base;
   margin: 0px 4px 10px 2px;
 }
 
@@ -213,7 +213,7 @@ taskbar#waybar.empty #taskbar {
 
 #idle_inhibitor {
   background: @base;
-  color: @hl_high;
+  color: @hl_med;
   font-size: 16px;
   padding: 4px 0px 8px 0px;
 }
