@@ -8,6 +8,7 @@ apple_cursor
 auto-cpufreq
 base
 base-devel
+bc
 blueman
 bluez
 bluez-utils
@@ -58,11 +59,13 @@ inotify-tools
 intel-gpu-tools
 intel-media-driver
 intel-ucode
+intel-undervolt
 inter-font
 jq
 kitty
 kvantum
 lazygit
+libva-intel-driver
 libva-utils
 linux-firmware
 linux-headers
@@ -79,6 +82,7 @@ networkmanager
 noto-fonts-emoji
 ntfs-3g
 nwg-look
+obs-studio
 pacman-contrib
 pacutils
 papirus-folders-catppuccin-git
@@ -97,6 +101,7 @@ python-pyquery
 python-requests
 python-websockets
 qbittorrent
+qt5-wayland
 qt6-wayland
 reflector
 resvg
