@@ -85,6 +85,15 @@
 
   "clock#1": {
     "format": "{:%H}",
+    "tooltip": false,
+  },
+  "clock#2": {
+    "format": "{:%M}",
+    "tooltip": false
+  },
+
+  "clock#3": {
+    "format": "{:%d}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "format": {
@@ -92,8 +101,8 @@
       }
     }
   },
-  "clock#2": {
-    "format": "{:%M}",
+  "clock#4": {
+    "format": "{:%m}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "format": {
@@ -160,4 +169,40 @@
     "on-click": "killall rofi || rofi -show drun",
     "tooltip": false
   },
+
+  "group/audio": {
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+    },
+    "orientation": "vertical",
+    "modules": [
+      "wireplumber#1",
+      "wireplumber#2"
+    ]
+  },
+
+  "group/backlight": {
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+    },
+    "orientation": "vertical",
+    "modules": [
+      "backlight#1",
+      "backlight#2"
+    ]
+  },
+
+  "group/battery": {
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+    },
+    "orientation": "vertical",
+    "modules": [
+      "battery#1",
+      "battery#2"
+    ]
+  }
 }

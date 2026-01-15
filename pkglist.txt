@@ -79,6 +79,7 @@ nautilus-share
 neovim
 network-manager-applet
 networkmanager
+noctalia-shell
 noto-fonts-emoji
 ntfs-3g
 nwg-look
